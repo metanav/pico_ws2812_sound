@@ -18,7 +18,7 @@ add_executable(pico_ws2812_sound)
 # generate the header file into the source tree as it is included in the RP2040 datasheet
 pico_generate_pio_header(pico_ws2812_sound ${CMAKE_CURRENT_LIST_DIR}/ws2812.pio OUTPUT_DIR ${CMAKE_CURRENT_LIST_DIR}/generated)
 
-target_sources(pico_ws2812_sound PRIVATE ws2812.c)
+target_sources(pico_ws2812_sound PRIVATE main.c)
 pico_enable_stdio_uart(pico_ws2812_sound 0)
 pico_enable_stdio_usb(pico_ws2812_sound 1)
 
